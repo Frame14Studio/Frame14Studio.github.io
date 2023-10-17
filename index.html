@@ -1,7 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #e0f7fa; /* Light blue background */
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div class="container">
+        <h1>Thank You!</h1>
+        <p>For your interest in <span id="appName">[insert app name]</span>.</p>
+        <p>For support, contact <a href="mailto:[insert email]" id="emailLink">[insert email]</a>.</p>
+    </div>
+    <script>
+        // Update these values as needed
+        const appName = "[insert app name]";
+        const email = "[insert email]";
+
+        document.getElementById('appName').innerText = appName;
+        const emailLink = document.getElementById('emailLink');
+        emailLink.innerText = email;
+        emailLink.setAttribute('href', 'mailto:' + email);
+    </script>
 </body>
 </html>
